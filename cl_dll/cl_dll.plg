@@ -1,0 +1,105 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: cl_dll - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\SCOTTM~1\LOCALS~1\Temp\RSP54.tmp" with contents
+[
+../common/zlib/dll32/zlib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib winmm.lib ../utils/vgui/lib/win32_vc6/vgui.lib wsock32.lib fmod/api/lib/fmodvc.lib vfw32.lib /nologo /subsystem:windows /dll /profile /map:".\Release/client.map" /debug /machine:I386 /out:"E:\sierra\Half-Life\steam\SteamApps\steve_mc0@hotmail.com\half-life\hlrally\cl_dlls\client.dll" /implib:".\Release/client.lib" 
+.\Release\ev_hldm.obj
+.\Release\hl_baseentity.obj
+.\Release\hl_events.obj
+.\Release\hl_objects.obj
+.\Release\hl_weapons.obj
+.\Release\interface.obj
+.\Release\voice_banmgr.obj
+.\Release\voice_status.obj
+.\Release\voice_vgui_tweakdlg.obj
+.\Release\rally_image.obj
+.\Release\rally_vgui.obj
+.\Release\rally_vguifx.obj
+.\Release\vgui_checkbutton2.obj
+.\Release\vgui_ClassMenu.obj
+.\Release\vgui_ConsolePanel.obj
+.\Release\vgui_ControlConfigPanel.obj
+.\Release\vgui_CustomObjects.obj
+.\Release\vgui_grid.obj
+.\Release\vgui_helpers.obj
+.\Release\vgui_int.obj
+.\Release\vgui_listbox.obj
+.\Release\vgui_loadtga.obj
+.\Release\vgui_mainmenu.obj
+.\Release\vgui_mp3.obj
+.\Release\vgui_SchemeManager.obj
+.\Release\vgui_ScorePanel.obj
+.\Release\vgui_scrollbar2.obj
+.\Release\vgui_ServerBrowser.obj
+.\Release\vgui_slider2.obj
+.\Release\vgui_TeamFortressViewport.obj
+.\Release\vgui_teammenu.obj
+.\Release\rally.obj
+.\Release\Rally_AntiHaxor.obj
+.\Release\Rally_CRC.obj
+.\Release\Rally_CryptFile.obj
+.\Release\Rally_Effects.obj
+.\Release\rally_fmod.obj
+.\Release\rally_hud_health.obj
+.\Release\rally_hud_radar.obj
+.\Release\rally_sound.obj
+.\Release\rally_zlib.obj
+.\Release\rallyhud.obj
+.\Release\ammo.obj
+.\Release\ammo_secondary.obj
+.\Release\ammohistory.obj
+.\Release\carinfo.obj
+.\Release\cdll_int.obj
+.\Release\com_weapons.obj
+.\Release\death.obj
+.\Release\demo.obj
+.\Release\entity.obj
+.\Release\ev_common.obj
+.\Release\events.obj
+.\Release\GameStudioModelRenderer.obj
+.\Release\geiger.obj
+.\Release\health.obj
+.\Release\hud.obj
+.\Release\hud_msg.obj
+.\Release\hud_redraw.obj
+.\Release\hud_servers.obj
+.\Release\hud_spectator.obj
+.\Release\hud_update.obj
+.\Release\in_camera.obj
+.\Release\input.obj
+.\Release\inputw32.obj
+.\Release\menu.obj
+.\Release\message.obj
+.\Release\mmgr.obj
+.\Release\parsemsg.obj
+.\Release\pm_debug.obj
+.\Release\pm_math.obj
+.\Release\pm_shared.obj
+.\Release\saytext.obj
+.\Release\status_icons.obj
+.\Release\statusbar.obj
+.\Release\studio_util.obj
+.\Release\StudioModelRenderer.obj
+.\Release\text_message.obj
+.\Release\tri.obj
+.\Release\util.obj
+.\Release\view.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\SCOTTM~1\LOCALS~1\Temp\RSP54.tmp"
+<h3>Output Window</h3>
+Linking...
+   Creating library .\Release/client.lib and object .\Release/client.exp
+
+
+
+<h3>Results</h3>
+client.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hl", "hl.vcproj", "{51397E5C-2756-4E3B-9D68-A7EC8C209072}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Germany = Germany
+		Profile = Profile
+		Release = Release
+		Win32 Debug = Win32 Debug
+		Win32 Release = Win32 Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Debug.ActiveCfg = Debug|Win32
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Debug.Build.0 = Debug|Win32
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Germany.ActiveCfg = Germany|Win32
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Germany.Build.0 = Germany|Win32
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Profile.ActiveCfg = Profile|Win32
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Profile.Build.0 = Profile|Win32
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Release.ActiveCfg = Release|Win32
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Release.Build.0 = Release|Win32
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Win32 Debug.ActiveCfg = Win32 Debug|Win32
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Win32 Debug.Build.0 = Win32 Debug|Win32
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Win32 Release.ActiveCfg = Win32 Release|Win32
+		{51397E5C-2756-4E3B-9D68-A7EC8C209072}.Win32 Release.Build.0 = Win32 Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

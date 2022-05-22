@@ -1,0 +1,91 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: hl - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\SCOTTM~1\LOCALS~1\Temp\RSP59.tmp" with contents
+[
+user32.lib advapi32.lib ../common/zlib/dll32/zlib.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"E:\sierra\Half-Life\steam\SteamApps\steve_mc0@hotmail.com\half-life\hlrally\dlls\hlrally.pdb" /debug /machine:I386 /def:".\hl.def" /out:"E:\sierra\Half-Life\steam\SteamApps\steve_mc0@hotmail.com\half-life\hlrally\dlls\hlrally.dll" /implib:".\Debug\hl.lib" 
+.\debughl\pm_shared.obj
+.\debughl\rally.obj
+.\debughl\Rally_AntiHaxor.obj
+.\debughl\rally_bot.obj
+.\debughl\rally_bot_waypoint.obj
+.\debughl\rally_checkpoint.obj
+.\debughl\Rally_CRC.obj
+.\debughl\Rally_CryptFile.obj
+.\debughl\rally_horn.obj
+.\debughl\rally_hotpotato.obj
+.\debughl\rally_rounds.obj
+.\debughl\rally_spectate.obj
+.\debughl\rally_websocket.obj
+.\debughl\Rally_zlib.obj
+.\debughl\animating.obj
+.\debughl\animation.obj
+.\debughl\bmodels.obj
+.\debughl\carinfo.obj
+.\debughl\cbase.obj
+.\debughl\client.obj
+.\debughl\combat.obj
+.\debughl\defaultai.obj
+.\debughl\doors.obj
+.\debughl\effects.obj
+.\debughl\explode.obj
+.\debughl\func_break.obj
+.\debughl\func_tank.obj
+.\debughl\game.obj
+.\debughl\gamerules.obj
+.\debughl\genericmonster.obj
+.\debughl\globals.obj
+.\debughl\h_ai.obj
+.\debughl\h_cine.obj
+.\debughl\h_cycler.obj
+.\debughl\h_export.obj
+.\debughl\lights.obj
+.\debughl\maprules.obj
+.\debughl\mmgr.obj
+.\debughl\monstermaker.obj
+.\debughl\monsters.obj
+.\debughl\monsterstate.obj
+.\debughl\multiplay_gamerules.obj
+.\debughl\nodes.obj
+.\debughl\pathcorner.obj
+.\debughl\plane.obj
+.\debughl\plats.obj
+.\debughl\player.obj
+.\debughl\pm_debug.obj
+.\debughl\pm_math.obj
+.\debughl\schedule.obj
+.\debughl\scripted.obj
+.\debughl\singleplay_gamerules.obj
+.\debughl\skill.obj
+.\debughl\sound.obj
+.\debughl\soundent.obj
+.\debughl\spectator.obj
+.\debughl\subs.obj
+.\debughl\talkmonster.obj
+.\debughl\teamplay_gamerules.obj
+.\debughl\tempmonster.obj
+.\debughl\triggers.obj
+.\debughl\util.obj
+.\debughl\voice_gamemgr.obj
+.\debughl\weapons.obj
+.\debughl\world.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\SCOTTM~1\LOCALS~1\Temp\RSP59.tmp"
+<h3>Output Window</h3>
+Linking...
+LINK : LNK6004: E:\sierra\Half-Life\steam\SteamApps\steve_mc0@hotmail.com\half-life\hlrally\dlls\hlrally.dll not found or not built by the last incremental link; performing full link
+   Creating library .\Debug\hl.lib and object .\Debug\hl.exp
+hl.exp : warning LNK4070: /OUT:hl.dll directive in .EXP differs from output filename "E:\sierra\Half-Life\steam\SteamApps\steve_mc0@hotmail.com\half-life\hlrally\dlls\hlrally.dll"; ignoring directive
+
+
+
+<h3>Results</h3>
+hlrally.dll - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>
