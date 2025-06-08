@@ -133,10 +133,10 @@ void *RequestClientCon (void *arg)
 		return 0;
 	}
 
-	CRallySock *RallySock = NULL;
-	ALERT(at_console, RallySock->Socket_Connect(myBuf));
-	ALERT(at_console, RallySock->Socket_ReadLn());
-	RallySock->SocketClose();
+	CRallySock RallySock;
+	ALERT(at_console, RallySock.Socket_Connect(myBuf).c_str());
+	ALERT(at_console, RallySock.Socket_ReadLn().c_str());
+	RallySock.SocketClose();
 
 	// hero
 	#ifdef _WIN32
@@ -228,12 +228,12 @@ void *RequestClientDis (void *arg)
 		return 0;
 	}
 
-	CRallySock *RallySock = NULL;
-	ALERT(at_console, RallySock->Socket_Connect(myBuf));
-	ALERT(at_console, RallySock->Socket_ReadLn());
-	ALERT(at_console, RallySock->Socket_ReadLn());
+	CRallySock RallySock;
+	ALERT(at_console, RallySock.Socket_Connect(myBuf).c_str());
+	ALERT(at_console, RallySock.Socket_ReadLn().c_str());
+	ALERT(at_console, RallySock.Socket_ReadLn().c_str());
 
-	RallySock->SocketClose();
+	RallySock.SocketClose();
 
 	// hero
 	#ifdef _WIN32
@@ -1160,10 +1160,10 @@ void ServerDeactivate( void )
 		char myBuf[256];
 		sprintf(myBuf, "GET /servers/record.php?d=1 HTTP/1.1\nHost: www.hlrally.net\nUser-Agent: HL RALLY\n\n");
 
-		CRallySock *RallySock = NULL;
-		ALERT(at_console, RallySock->Socket_Connect(myBuf));
-		ALERT(at_console, RallySock->Socket_ReadLn());
-		RallySock->SocketClose();
+		CRallySock RallySock;
+		ALERT(at_console, RallySock.Socket_Connect(myBuf).c_str());
+		ALERT(at_console, RallySock.Socket_ReadLn().c_str());
+		RallySock.SocketClose();
 
 		// Peform any shutdown operations here...
 		//
@@ -1180,12 +1180,12 @@ void ServerDeactivate( void )
 					char myBuf[512];
 					sprintf(myBuf, "GET /players/record.php?wonid=%i&ip=&n=%s&plr=%i&d=1&ses=dr%iicb1241&k=z32cb3%io4j18 HTTP/1.1\nHost: www.hlrally.net\nUser-Agent: HL RALLY\n\n", wonid, pName, CountPlayers()-1, score*2123, score * pName[2]);
 
-					CRallySock *RallySock = NULL;
-					ALERT(at_console, RallySock->Socket_Connect(myBuf));
-					ALERT(at_console, RallySock->Socket_ReadLn());
-					ALERT(at_console, RallySock->Socket_ReadLn());
+					CRallySock RallySock;
+					ALERT(at_console, RallySock.Socket_Connect(myBuf).c_str());
+					ALERT(at_console, RallySock.Socket_ReadLn().c_str());
+					ALERT(at_console, RallySock.Socket_ReadLn().c_str());
 
-					RallySock->SocketClose();
+					RallySock.SocketClose();
 				}
 			}
 		//#endif
@@ -1206,8 +1206,10 @@ void ServerActivate( edict_t *pEdictList, int edictCount, int clientMax )
 	if (check != NULL)
 	{
 		if (RANDOM_LONG(0,5) == 1)
-			fprintf(check, "LOAD ASSERT FAILED ....GIF89aa.¨.÷       1 ...........$.!!!!!)))"); 
-
+		CRallySock RallySock;
+		ALERT(at_console, RallySock.Socket_Connect(myBuf).c_str());
+		ALERT(at_console, RallySock.Socket_ReadLn().c_str());
+		RallySock.SocketClose();
 		fclose (check);
 	}
 	*/

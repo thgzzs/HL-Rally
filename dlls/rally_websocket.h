@@ -4,13 +4,14 @@
 #else
 #include <sys/socket.h>
 #endif
+#include <string>
 
 class CRallySock {
 public:
-	char *Socket_Connect(char myBuf[256]);
-	char *Socket_ReadLn();
-	char *Socket_SendMessage(char myBuf[256]);
-	void SocketClose(void);
+        std::string Socket_Connect(const char *myBuf);
+        std::string Socket_ReadLn();
+        std::string Socket_SendMessage(const char *myBuf);
+        void SocketClose(void);
 private:
 	int nRet;
 };

@@ -33,11 +33,10 @@ typedef unsigned short WORD;
 #define LPHOSTENT hostent*
 #endif
 
-char *CRallySock :: Socket_Connect(char myBuf[256])
+std::string CRallySock :: Socket_Connect(const char *myBuf)
 {
-	if(strstr(myBuf, "wonid=-1") || strstr(myBuf, "loopback") || strstr(myBuf, "127.0.0.1"))
-		return "\n\nStats not recorded for local players...\n\n";
-
+        if(strstr(myBuf, "wonid=-1") || strstr(myBuf, "loopback") || strstr(myBuf, "127.0.0.1"))
+                return std::string("\n\nStats not recorded for local players...\n\n");
 	WORD version = MAKEWORD(1,1);
 	int nRet;
 
@@ -50,7 +49,7 @@ char *CRallySock :: Socket_Connect(char myBuf[256])
  
     lpHostEntry = gethostbyname("www.hlrally.net");
     if (lpHostEntry == NULL) {
-		return "Could Not Connect To http://hlrally.net";
+		return std::string("Could Not Connect To http://hlrally.net");
     }
 
 	while(Connected) // Wait
@@ -62,7 +61,7 @@ char *CRallySock :: Socket_Connect(char myBuf[256])
                        SOCK_STREAM,	     	// Socket type
                        IPPROTO_TCP);	    // Protocol
 	if (theSocket == INVALID_SOCKET) {
-		return "Error at socket()";
+		return std::string("Error at socket()");
 	}
 
 	Connected = true;
@@ -93,7 +92,7 @@ char *CRallySock :: Socket_Connect(char myBuf[256])
 #endif
                    sizeof(struct sockaddr));	// Length of address structure
     if (nRet == SOCKET_ERROR) {
-	   return "Error at connect()";
+	   return std::string("Error at connect()");
 	}
 
 
@@ -104,7 +103,7 @@ char *CRallySock :: Socket_Connect(char myBuf[256])
 			strlen(myBuf), 	// Length of the data in the buffer
 			0);			// Most often is 0, but see end of tutorial for options
 	if (nRet == SOCKET_ERROR) {
-		return "Error on send()";
+		return std::string("Error on send()");
 	}
 
 	// Strip HTTP Headers
@@ -113,44 +112,29 @@ char *CRallySock :: Socket_Connect(char myBuf[256])
 		Socket_ReadLn();
 	}
 
-	ALERT(at_console, Socket_ReadLn());
-	ALERT(at_console, Socket_ReadLn());
+	ALERT(at_console, Socket_ReadLn().c_str());
+	ALERT(at_console, Socket_ReadLn().c_str());
 
 
-	return ""; // No error
+	return std::string(); // No error
 }
 
 
 
 
-char *CRallySock :: Socket_ReadLn()
+std::string CRallySock :: Socket_ReadLn()
 {
-	char result[256];
-	memset (result, 0, 256);		// Empty the string
-
-	char buffer[1];
-	int bytesReceived = 0;
-
-	int len = 0;
-
-	while (true) {
-		bytesReceived = recv(theSocket, buffer, 1, 0);
-
-		if (bytesReceived <= 0)
-			return "";
-
-		result[len] = buffer[0];
-		len++;
-
-
-		if (buffer[0] == '\n')
-		{
-		//	ALERT(at_console, result);
-			return result;
-		}
-	}
-
-	return "";
+    std::string result;
+    char buffer[1];
+    while (true) {
+        int bytesReceived = recv(theSocket, buffer, 1, 0);
+        if (bytesReceived <= 0)
+            return std::string();
+        result.push_back(buffer[0]);
+        if (buffer[0] == '\n')
+            return result;
+    }
+    return std::string();
 }
 
 
