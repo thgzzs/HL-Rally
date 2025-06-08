@@ -8,10 +8,9 @@ DLLNAME=hlr
 
 ARCH=i386
 
-#make sure this is the correct compiler for your system
-#hero
-CC=egcs
-#CC=gcc
+# Use a maintained compiler.  Default to g++, but allow overriding
+# via the environment (e.g. CC=clang++ make)
+CC ?= g++
 
 DLL_SRCDIR=.
 ENGINE_SRCDIR=../engine
@@ -32,8 +31,8 @@ BASE_CFLAGS=	-Dstricmp=strcasecmp -D_strnicmp=strncasecmp -Dstrnicmp=strncasecmp
 		-DCLIENT_WEAPONS
 
 #safe optimization
-#CFLAGS=$(BASE_CFLAGS) -w -m486 -O1
-CFLAGS=$(BASE_CFLAGS) -w -m486 -g -pthread
+#CFLAGS=$(BASE_CFLAGS) -w -O1
+CFLAGS=$(BASE_CFLAGS) -w -g -pthread
 
 #full optimization
 #CFLAGS=$(BASE_CFLAGS) -w -O1 -m486 -ffast-math -funroll-loops \
