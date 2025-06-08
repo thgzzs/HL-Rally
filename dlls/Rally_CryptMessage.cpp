@@ -7,19 +7,28 @@
 #include "util.h"
 #include "cbase.h"
 
+
 #pragma warning(disable:4018)
 
-char * Encrypt(char *sName, char *data)
+// Returns a heap allocated buffer containing the encrypted message.  The caller
+// is responsible for freeing the returned pointer with delete[].
+char * Encrypt(const char *sName, const char *data)
 {
-	char *message = "";
+        if( !data )
+                return NULL;
 
-	int key = sName[1];
-	key = key / 10;
+        size_t len = strlen( data );
+        char *message = new char[len + 1];
+        message[len] = '\0';
 
-   	int step = 0, y;		// step for array handle
-    						// y for ASCII handler 
+        int key = 0;
+        if (sName && sName[1])
+                key = sName[1];
+        key = key / 10;
 
-	for (step = 0; step <= strlen(data); step++)
+        int y;                // ASCII handler
+
+        for (size_t step = 0; step < len; step++)
 	{
 		y = data[step];		//assign ASCII value
 
